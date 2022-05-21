@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="stylesheet.css">
+   <title>किrana.com</title>
+</head>
+
+<body>
+   <nav>
+      <div class="menu-icon">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="logo">
+         किrana.com
+      </div>
+      <div class="nav-items">
+         <li><a href="front.html">Home</a></li>
+         <li><a href="category.html">Category</a></li>
+         <li><a href="product.html">Product</a></li>
+         <li><a href="deal.html">Deal</a></li>
+         <li><a href="contact.html">Contact</a></li>
+      </div>
+      <div class="search-icon">
+         <span class="fas fa-search"></span>
+      </div>
+      <div class="cancel-icon">
+         <span class="fas fa-times"></span>
+      </div>
+      <form action="#">
+         <input type="search" class="search-data" placeholder="Search" required>
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+   </nav>
+
+   <section class="home" id="home">
+
+      <div class="image">
+         <img src="images/home-img.png" alt="">
+      </div>
+
+      <div class="content">
+         <span>Fresh and organic</span>
+         <h3>आओ और ले जाओ <span> सुना है यहाँ सब मिलता है!</span> </h3>
+         <a href="product.html" class="btn">get started</a>
+      </div>
+
+   </section>
+
+   <section class="banner-container">
+
+      <div class="banner">
+         <img src="images/banner-1.jpg" alt="">
+         <div class="content">
+            <h3>special offer</h3>
+            <p>upto 25% off</p>
+            <a href="special.html" class="btn">check out</a>
+         </div>
+      </div>
+
+      <div class="banner">
+         <img src="images/banner-2.jpg" alt="">
+         <div class="content">
+            <h3>limited offer</h3>
+            <p>upto 80% off</p>
+            <a href="limited.html" class="btn">check out</a>
+         </div>
+      </div>
+
+   </section>
+
+   <section class="deal" id="deal">
+
+      <div class="content">
+
+         <h3 class="title">deal of the day</h3>
+         <p><b>Save More With Us!!!</b></p>
+
+         <div class="count-down">
+            <div class="box">
+               <h3 id="day">00</h3>
+               <span>day</span>
+            </div>
+            <div class="box">
+               <h3 id="hour">00</h3>
+               <span>hour</span>
+            </div>
+            <div class="box">
+               <h3 id="minute">00</h3>
+               <span>minute</span>
+            </div>
+            <div class="box">
+               <h3 id="second">00</h3>
+               <span>second</span>
+            </div>
+         </div>
+
+         <a href="deal.html" class="btn">check the deal</a>
+
+      </div>
+
+   </section>
+   <br>
+
+   <section class="newsletter">
+
+      <h3>subscribe us for latest updates</h3>
+
+      <form action="">
+         <input class="box" type="email" placeholder="enter your email">
+         <input type="submit" value="subscribe" class="btn">
+      </form>
+
+   </section>
+
+   <section class="footer" id="footer">
+
+      <div class="box-container">
+
+         <div class="box">
+            <div class="font"><a href="front.html"> किrana.com</a></div>
+            <p> OFFICE-G782+55X, Mehrauli - Badarpur Rd, near Batra Hospital, Block D, Hamdard Nagar, New Delhi, Delhi
+               110062
+            </p>
+            <div class="share">
+               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+               <a href="#" class="fa fa-facebook"></a>
+               <a href="#" class="fa fa-twitter"></a>
+               <a href="#" class="fa fa-instagram"></a>
+               <a href="#" class="fa fa-linkedin"></a>
+            </div>
+         </div>
+
+         <div class="box">
+            <h3>OUR LOCATION</h3>
+            <div class="links">
+               <a href="https://goo.gl/maps/zG2Yw8k8q45Uoeqn6">Karol Bagh</a>
+               <a href="https://goo.gl/maps/f6tk74rwF9pzQRkM6">Tata nagar</a>
+               <a href="https://goo.gl/maps/bzoVJSCG1VDxCC1HA">Chennai</a>
+               <a href="https://goo.gl/maps/XQ7t7aEyeZLP2H1R7">Pune</a>
+               <a href="https://goo.gl/maps/rLiL1rePLygptvTi6">Ahmedabad</a>
+            </div>
+         </div>
+
+         <div class="box">
+            <h3>QUICK LINK</h3>
+            <div class="links">
+               <a href="front.html">Home</a>
+               <a href="category.html">Category</a>
+               <a href="product.html">Product</a>
+               <a href="deal.html">Deal</a>
+               <a href="contact.html">Contact</a>
+            </div>
+         </div>
+
+         <div class="box">
+            <h3>DOWNLOAD APP</h3>
+            <div class="links">
+               <a href="#">Coming Soon</a>
+               <a href="#">Still We Don't</a>
+               <a href="#">Afford that budget</a>
+            </div>
+         </div>
+
+      </div>
+
+      <h1 class="credit"> Created by <span> DxD </span> | All rights reserved! </h1>
+
+   </section>
+
+   <script>
+
+
+      const menuBtn = document.querySelector(".menu-icon span");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const items = document.querySelector(".nav-items");
+      const form = document.querySelector("form");
+      menuBtn.onclick = () => {
+         items.classList.add("active");
+         menuBtn.classList.add("hide");
+         searchBtn.classList.add("hide");
+         cancelBtn.classList.add("show");
+      }
+      cancelBtn.onclick = () => {
+         items.classList.remove("active");
+         menuBtn.classList.remove("hide");
+         searchBtn.classList.remove("hide");
+         cancelBtn.classList.remove("show");
+         form.classList.remove("active");
+         cancelBtn.style.color = "#ff3d00";
+      }
+      searchBtn.onclick = () => {
+         form.classList.add("active");
+         searchBtn.classList.add("hide");
+         cancelBtn.classList.add("show");
+      }
+      let countDate = new Date('june 15, 2022 00:00:00').getTime();
+
+      function CountDown() {
+
+         let now = new Date().getTime();
+         gap = countDate - now;
+
+         let second = 1000;
+         let minute = second * 60;
+         let hour = minute * 60;
+         let day = hour * 24;
+
+         let d = Math.floor(gap / (day));
+         let h = Math.floor((gap % (day)) / (hour));
+         let m = Math.floor((gap % (hour)) / (minute));
+         let s = Math.floor((gap % (minute)) / (second));
+
+         document.getElementById('day').innerText = d;
+         document.getElementById('hour').innerText = h;
+         document.getElementById('minute').innerText = m;
+         document.getElementById('second').innerText = s;
+
+      }
+
+      setInterval(function () {
+         CountDown();
+      }, 1000)
+   </script>
+
+</body>
+
+</html>
