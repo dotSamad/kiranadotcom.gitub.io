@@ -6,13 +6,14 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="stylesheet.css">
+
    <title>किrana.com</title>
 </head>
 
 <body>
    <nav>
       <div class="menu-icon">
-         <span class="fas fa-bars"></span>
+         <span class="fa fa-bars"></span>
       </div>
       <div class="logo">
          किrana.com
@@ -25,14 +26,14 @@
          <li><a href="contact.html">Contact</a></li>
       </div>
       <div class="search-icon">
-         <span class="fas fa-search"></span>
+         <span class="fa fa-search"></span>
       </div>
       <div class="cancel-icon">
-         <span class="fas fa-times"></span>
+         <span class="fa fa-times"></span>
       </div>
       <form action="#">
          <input type="search" class="search-data" placeholder="Search" required>
-         <button type="submit" class="fas fa-search"></button>
+         <button type="submit" class="fa fa-search"></button>
       </form>
    </nav>
 
@@ -167,66 +168,11 @@
 
       </div>
 
-      <h1 class="credit"> Created by <span> DxD </span> | All rights reserved! </h1>
+      <h1 class="credit"> Created by <span> devdotsaad</span> | All rights reserved! </h1>
 
    </section>
-
-   <script>
-
-
-      const menuBtn = document.querySelector(".menu-icon span");
-      const searchBtn = document.querySelector(".search-icon");
-      const cancelBtn = document.querySelector(".cancel-icon");
-      const items = document.querySelector(".nav-items");
-      const form = document.querySelector("form");
-      menuBtn.onclick = () => {
-         items.classList.add("active");
-         menuBtn.classList.add("hide");
-         searchBtn.classList.add("hide");
-         cancelBtn.classList.add("show");
-      }
-      cancelBtn.onclick = () => {
-         items.classList.remove("active");
-         menuBtn.classList.remove("hide");
-         searchBtn.classList.remove("hide");
-         cancelBtn.classList.remove("show");
-         form.classList.remove("active");
-         cancelBtn.style.color = "#ff3d00";
-      }
-      searchBtn.onclick = () => {
-         form.classList.add("active");
-         searchBtn.classList.add("hide");
-         cancelBtn.classList.add("show");
-      }
-      let countDate = new Date('November 15, 2022 00:00:00').getTime();
-
-      function CountDown() {
-
-         let now = new Date().getTime();
-         gap = countDate - now;
-
-         let second = 1000;
-         let minute = second * 60;
-         let hour = minute * 60;
-         let day = hour * 24;
-
-         let d = Math.floor(gap / (day));
-         let h = Math.floor((gap % (day)) / (hour));
-         let m = Math.floor((gap % (hour)) / (minute));
-         let s = Math.floor((gap % (minute)) / (second));
-
-         document.getElementById('day').innerText = d;
-         document.getElementById('hour').innerText = h;
-         document.getElementById('minute').innerText = m;
-         document.getElementById('second').innerText = s;
-
-      }
-
-      setInterval(function () {
-         CountDown();
-      }, 1000)
-   </script>
-
+   <script src="index.js"></script>
+ 
 </body>
 
 </html>
